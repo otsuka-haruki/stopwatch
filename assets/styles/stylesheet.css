@@ -114,7 +114,6 @@ html {
   top: 0;
   right: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .stopwatch-page .header-buttons button {
@@ -211,6 +210,8 @@ html {
   .stopwatch-page .header-buttons button {
     height: 5vh;
     padding: 0;
+    text-align: center;
+    font-size: 16px;
   }
   .stopwatch-page .header-buttons button:first-of-type {
     width: 40vw;
@@ -240,7 +241,7 @@ html {
     height: 20%;
   }
   .stopwatch-page .stopwatch-row-sp .stopwatch-box .title-box h3 {
-    font-size: 26px;
+    font-size: 24px;
   }
   .stopwatch-page .stopwatch-row-sp .stopwatch-box .stopwatch-body {
     height: 35%;
