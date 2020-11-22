@@ -12,6 +12,8 @@ class Stopwatch {
     this.addEventToResetButton();
     this.addEventToOtherElements();
   }
+  
+  ////////// creating new stopwatch with template
 
   createNewStopwatch() {
       const stopwatchRow = document.querySelector('.stopwatch-row');
@@ -33,7 +35,7 @@ class Stopwatch {
     this.resetButton = this.stopwatchBox.querySelector('#reset');
     this.goalHourPhrase = this.stopwatchBox.querySelector('#goal #hour');
 
-    ////////// initializing global variables & constants
+    ////////// initializing values
     this.isStopwatchRunning = false;
     this.intervalId;
     this.secondNumber = 0;
@@ -42,7 +44,7 @@ class Stopwatch {
     this.enteredGoalNumber = null;
   }
 
-  ////////// toggle stopwatch
+  ////////// toggle start and stop
 
   addEventToStartStopButton() {
     this.startButton.addEventListener('click', toggleStopwatch.bind(this));
@@ -105,9 +107,11 @@ class Stopwatch {
     }
   }
 
-  ////////// adding eventlistener to some DOM elements
+  ////////// adding eventlistener to some DOM elements in stopwatch
 
   addEventToOtherElements() {
+    
+    ////////// click title to enter title
 
     const addEventToTitle = () => {
       const titleBox = this.stopwatchBox.querySelector('#title-box');
@@ -122,6 +126,8 @@ class Stopwatch {
       });
     }
 
+    ////////// click goal phrase to set goal
+    
     const addEventToGoal = () => {
       this.goalHourPhrase.addEventListener('click', () => {
         this.enteredGoalNumber = parseInt(prompt('How many hours will you work on it today?'));
@@ -134,6 +140,8 @@ class Stopwatch {
         }
       });
     }
+    
+    ////////// click to delete stopwatch
 
     const addEventToDeleteButton = () => {
       this.deleteButton.addEventListener('click', () => {
@@ -160,6 +168,9 @@ class App {
     this.addEventToModeToggle();
     this.addEventToAddButton();
   }
+  
+  ////////// toggle dark mode and light mode
+  
   addEventToModeToggle() {
     const modeButton = document.querySelector('#show-mode-toggle');
     modeButton.addEventListener('click', () => {
@@ -173,6 +184,9 @@ class App {
       }
     });
   }
+  
+  ////////// add more stopwatch
+  
   addEventToAddButton() {
     document.getElementById('add-stopwatch').addEventListener('click', () => {
       if (stopwatchId - howManyStopwatchDeleted < 2) {
