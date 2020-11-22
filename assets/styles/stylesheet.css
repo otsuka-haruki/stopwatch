@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap");
+html {
+  font-family: "Avenir", "Noto Sans JP", sans-serif;
+  font-size: 20px;
+  color: #102027;
+  background-color: #ffe0b2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.vertical-bound {
+  cursor: pointer;
+  animation: swingVertical 2s ease infinite;
+}
+@keyframes swingVertical {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+  60% {
+    transform: translateY(-6px);
+  }
+  70% {
+    transform: translateY(4px);
+  }
+  80% {
+    transform: translateY(-2px);
+  }
+  90% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.horizontal-bound {
+  cursor: pointer;
+  animation: swingHorizontal 2s ease infinite;
+}
+@keyframes swingHorizontal {
+  15% {
+    transform: translateX(5px);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  65% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.zoom {
+  animation: zoom 0.5s ease;
+  animation-iteration-count: 1;
+}
+@keyframes zoom {
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.stopwatch-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.stopwatch-page .header-buttons {
+  height: 8vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stopwatch-page .header-buttons button {
+  padding: 10px 30px;
+}
+.stopwatch-page .header-buttons button:last-of-type {
+  border-left: 1px solid #102027;
+}
+.stopwatch-page .header-buttons button i {
+  margin-right: 15px;
+}
+.stopwatch-page .stopwatch-row-pc {
+  height: 500px;
+  width: 100vw;
+}
+.stopwatch-page .stopwatch-box {
+  width: 40vw;
+  margin: 0 2vw;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #102027;
+  border-radius: 20px;
+  position: relative;
+}
+.stopwatch-page .stopwatch-box #delete {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.stopwatch-page .stopwatch-box .title-box {
+  margin-top: 7%;
+  height: 20%;
+  text-align: center;
+}
+.stopwatch-page .stopwatch-box .title-box h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.stopwatch-page .stopwatch-box .stopwatch-body {
+  width: 100%;
+  height: 30%;
+}
+.stopwatch-page .stopwatch-box .stopwatch-body p {
+  font-size: 40px;
+  font-weight: bold;
+}
+.stopwatch-page .stopwatch-box .time-bar-box {
+  width: 80%;
+  height: 30%;
+  padding: 4% 0;
+  flex-direction: column;
+}
+.stopwatch-page .stopwatch-box .time-bar-box .time-bar {
+  height: 10px;
+  width: 100%;
+  border-radius: 4px;
+  background: #eceff1;
+  overflow: hidden;
+}
+.stopwatch-page .stopwatch-box .time-bar-box .time-bar #progress-time-bar {
+  height: 100%;
+  width: 0;
+  background: #ff1744;
+}
+.stopwatch-page .stopwatch-box .buttons {
+  width: 100%;
+  height: 20%;
+  align-items: flex-start;
+}
+.stopwatch-page .stopwatch-box .buttons button {
+  padding: 20px;
+  border: 1px solid #102027;
+  border-radius: 10px;
+}
+.stopwatch-page .stopwatch-box .buttons button i {
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .stopwatch-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stopwatch-page .header-buttons {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    align-items: center;
+  }
+  .stopwatch-page .header-buttons button {
+    height: 5vh;
+    padding: 0;
+  }
+  .stopwatch-page .header-buttons button:first-of-type {
+    width: 40vw;
+  }
+  .stopwatch-page .header-buttons button:last-of-type {
+    width: 50vw;
+    padding-left: 5vw;
+  }
+  .stopwatch-page .header-buttons button i {
+    margin-right: 15px;
+  }
+  .stopwatch-page .stopwatch-row-sp {
+    height: 90vh;
+    width: 100vw;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+  }
+  .stopwatch-page .stopwatch-row-sp .stopwatch-box {
+    width: 90vw;
+    margin: 2vh 0;
+    height: 40vh;
+  }
+  .stopwatch-page .stopwatch-row-sp .stopwatch-box .title-box {
+    margin-top: 10%;
+    height: 20%;
+  }
+  .stopwatch-page .stopwatch-row-sp .stopwatch-box .title-box h3 {
+    font-size: 26px;
+  }
+  .stopwatch-page .stopwatch-row-sp .stopwatch-box .stopwatch-body {
+    height: 35%;
+    width: 100%;
+  }
+  .stopwatch-page .stopwatch-row-sp .stopwatch-box .buttons {
+    height: 35%;
+    align-items: center;
+  }
+  .stopwatch-page .stopwatch-row-sp .stopwatch-box .time-bar-box {
+    display: none;
+  }
+}
+.dark-mode {
+  background: #102027;
+  color: #fafafa;
+}
+.dark-mode #add-stopwatch,
+.dark-mode #show-mode-toggle {
+  border-color: #fafafa;
+}
+.dark-mode .stopwatch-box {
+  border-color: #fafafa;
+}
+.dark-mode #reset,
+.dark-mode #start {
+  border-color: #fafafa;
+}

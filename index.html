@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stopwatch made by Haruki Otsuka</title>
+  <link rel="stylesheet" href="assets/styles/destyle.css">
+  <link rel="stylesheet" href="assets/styles/stylesheet.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <script src="assets/scripts/app.js" defer></script>
+</head>
+
+<body>
+
+  <div class="stopwatch-page ">
+    <div class="header-buttons">
+      <button id="show-mode-toggle"><i class="fas fa-adjust"></i>Dark Mode</button>
+      <button id="add-stopwatch"><i class="fas fa-plus"></i>Add One More</button>
+    </div>
+    <div class="stopwatch-row flex-around stopwatch-row-pc stopwatch-row-sp">
+    </div>
+    <template id="template-stopwatch-box">
+      <div class="stopwatch-box">
+        <button id="delete"><i class="fas fa-times"></i></button>
+        <div class="title-box flex-center" id="title-box">
+          <h3>Click here to enter title</h3>
+        </div>
+        <div class="stopwatch-body flex-center">
+          <p id="stopwatch-body-p"><span id="hour">00</span> : <span id="minute">00</span> : <span id="second">00</span></p>
+        </div>
+        <div class="time-bar-box flex-around">
+          <p id="goal">Today's goal : <span id="hour">Click here to set your goal (in hour)</span></p>
+          <div class="time-bar">
+            <div id="progress-time-bar"></div>
+          </div>
+        </div>
+        <div class="buttons flex-around">
+          <button id="start" class="flex-center"><i class="fas fa-play"></i><p class="vertical-bound">Start</p></button>
+          <button id="reset"><i class="fas fa-redo-alt"></i>Reset</button>
+        </div>
+      </div>
+    </template>
+  </div>
+
+</body>
+
+</html>
